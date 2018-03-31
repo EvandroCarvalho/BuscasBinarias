@@ -7,6 +7,17 @@ import java.util.LinkedList;
 
 public class ListaAdjacente {
     public static void main(String[] args) {
+
+        System.out.println("Lista adjacente:\n" + listaAdjacente());
+        System.out.println("-------------------------------------");
+        System.out.println("Buscar em largura:");
+        new BuscaLargura().busca(listaAdjacente());
+        System.out.println("-------------------------------------");
+        System.out.println("Busca em profundidade:");
+        new BuscaProfundidade().profundidade(listaAdjacente());
+    }
+
+    public static Grafo listaAdjacente(){
         Grafo g = new Grafo();
         Vertice s = g.addVertice("s");
         Vertice a = g.addVertice("a");
@@ -19,8 +30,7 @@ public class ListaAdjacente {
         Aresta ty = g.addAresta(t, y);
         Aresta yt = g.addAresta(y, t);
         Aresta yz = g.addAresta(y, z);
-        System.out.println("Lista adjacente:\n" + g);
-        new BuscaLargura().busca(g);
-        new BuscaProfundidade().profundiade();
+        return g;
+
     }
 }

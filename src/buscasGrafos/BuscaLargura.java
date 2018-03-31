@@ -1,6 +1,5 @@
 package buscasGrafos;
 
-import grafos.Aresta;
 import grafos.Grafo;
 import grafos.Vertice;
 
@@ -19,7 +18,7 @@ public class BuscaLargura {
                 lista.add(grafo.vertices.get(0).nome);
                 vertice = grafo.vertices.remove(0);
                 while ( vertice.adj.size() != 0 ){
-                    System.out.println("Vertice : Origem " + vertice.adj.get(0).origem.nome +
+                    System.out.println("Vertice " + vertice.nome.toUpperCase() + ": Origem " + vertice.adj.get(0).origem.nome +
                             "  Destino " + vertice.adj.get(0).destino.nome + " procesado");
                     vertice.adj.remove(0);
                 }
