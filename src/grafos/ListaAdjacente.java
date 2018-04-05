@@ -2,8 +2,7 @@ package grafos;
 
 import buscasGrafos.*;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
+
 
 public class ListaAdjacente {
     public static void main(String[] args) {
@@ -14,7 +13,7 @@ public class ListaAdjacente {
         new BuscaLargura().busca(listaAdjacente());
         System.out.println("-------------------------------------");
         System.out.println("Busca em profundidade:");
-        new BuscaProfundidade().profundidade(listaAdjacente());
+        new BuscaProfundidade("z").busca(listaAdjacente().vertices.get(0));
     }
 
     public static Grafo listaAdjacente(){
