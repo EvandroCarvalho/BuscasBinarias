@@ -20,7 +20,7 @@ public class BuscaProfundidade {
         this.pilha.add(vertice);
         if(resultadoBusca(vertice)) {
             System.out.println("Encontrado: " + valorBusca);
-            valorBusca = "";
+            System.exit(0);
         }
         else {
             for(int i = 0; i < vertice.adj.size(); i++){
@@ -31,7 +31,14 @@ public class BuscaProfundidade {
                 }
             }
         }
+        caminhoPercorrido(this.pilha);
         this.pilha.pop();
 
+    }
+    private void caminhoPercorrido(Stack<Vertice> pilha){
+        for(int i = 0; i < pilha.size(); i++){
+            System.out.print(pilha.get(i).nome + " -> ");
+        }
+        System.out.println("");
     }
 }

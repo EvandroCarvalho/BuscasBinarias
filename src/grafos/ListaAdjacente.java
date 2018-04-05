@@ -13,7 +13,7 @@ public class ListaAdjacente {
         new BuscaLargura().busca(listaAdjacente());
         System.out.println("-------------------------------------");
         System.out.println("Busca em profundidade:");
-        new BuscaProfundidade("z").busca(listaAdjacente().vertices.get(0));
+        new BuscaProfundidade("o").busca(listaAdjacente().vertices.get(0));
     }
 
     public static Grafo listaAdjacente(){
